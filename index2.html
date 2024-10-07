@@ -12,6 +12,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            text-align: center;
             height: 100vh;
             overflow: hidden;
             font-family: 'Arial', sans-serif;
@@ -82,10 +83,21 @@
                 left: 0;
             }
         }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 40px; /* Sesuaikan ukuran font untuk tampilan mobile */
+            }
+
+            .random-photo {
+                width: 70px;
+                height: 70px;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>I love you sekebon </h1>
+    <h1>I love you sekebon</h1>
 
     <!-- Tambahkan gambar random -->
     <img src="images/foto1.png" alt="random" class="random-photo" style="top: 10%; left: 10%;">
