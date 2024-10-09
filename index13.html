@@ -56,13 +56,37 @@
                 font-size: 16px;
             }
         }
+
+        /* Gaya untuk pesan loading */
+        .loading-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #000000;
+        }
     </style>
 </head>
 <body>
 
-    <h1>makasi udah mau mencet 6x</h1>
-    <p>Lanjut ga nih?</p>
-    <a href="index3.html" class="button">Next</a>
+    <h1>masih belum</h1>
+    <p>Lanjut gak nih?</p>
+    <a href="#" class="button" id="nextButton">Next</a>
+    <p class="loading-message" id="loadingMessage">sabar ye lagi loading nih...</p>
+
+    <script>
+        document.getElementById('nextButton').addEventListener('click', function(event) {
+            event.preventDefault(); // Mencegah pengalihan langsung
+
+            // Menampilkan pesan loading
+            var loadingMessage = document.getElementById('loadingMessage');
+            loadingMessage.style.display = 'block';
+
+            // Setelah 5 detik, lanjutkan ke halaman berikutnya
+            setTimeout(function() {
+                window.location.href = 'index14.html'; // Ganti dengan halaman yang diinginkan
+            }, 5000); // 5 detik
+        });
+    </script>
 
 </body>
 </html>
